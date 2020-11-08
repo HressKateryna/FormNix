@@ -78,16 +78,19 @@
 				width: 150px;
 				height: 25px;
 			}
+			#lab{
+				margin-left: 120px;
+			}
 	</style>
 </head>
 <body>
 	<center>
-		<h2>Opinion poll</h2>
+		<h2>Регестрация</h2>
 	</center>
 	<form method="post">
 		<ul>
 		    <li>
-		      <label for="name">Name:</label>
+		      <label for="name">Имя:</label>
 		      <input type="text" id="name" name="name" value="<?php echo (isset($_COOKIE['name'])) ? htmlentities($_COOKIE['name']) : '' ?>">
 		    </li>
 		    <li>
@@ -95,15 +98,22 @@
 		      <input type="text" id="mail" name="mail" value="<?php echo (isset($_COOKIE['mail'])) ? htmlentities($_COOKIE['mail']) : '' ?>">
 		    </li>
 		    <li>
-		      <label for="msg">Message:</label>
+		      <label for="msg">Телефон:</label>
 		      <textarea id="msg" name="message">
 		      	<?php echo (isset($_COOKIE['message'])) ? htmlentities($_COOKIE['message']) : '' ?>
 		      </textarea>
 		    </li>
 		  </ul>
 		  <center>
-		  	<input id="sub" type="submit" name="submit" value="Отправить" />
+		  	<input id="sub" type="submit" name="submit" value="Зарегестрировать" />
 		  </center>
+		  <label id="leb">
+		  	<a href="">Войти</a>
+		  </lable>
+		  <label id="leb">
+		  	<a href="review.php">Каталог товаров</a>
+		  </label>
+
 		  
 	</form>
 </body>

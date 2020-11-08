@@ -1,6 +1,4 @@
 <?php 
-echo 'Практика'.'<br>'.'<br>';
-echo '#1'.'<br>';
 $host = 'localhost';
 $db_user = 'root';
 $db_pass = '';
@@ -14,16 +12,15 @@ if(mysqli_connect_errno()){
 
 $session = [];
 $querySel = "SELECT * FROM user";
-$queryInt = "INSERT INTO user(id, name, email, message) VALUE (1, $name, $mail, $text)";
+$queryCot = "SELECT COUNT(*) FROM user";
 
 
-if($result = $mysqli -> query($queryInt)){
-	echo "New record created successfully";
+if($result = $mysqli -> query($queryCot)){
+    while ($obj = $result -> fetch_assoc()){
+        $sessionCot[] = $obj;
+    }
     $result -> close();
-}else{
-	echo "Error: " . $queryInt . "<br>" . mysqli_error($conn);
 }
-
 if($result = $mysqli -> query($querySel)){
     while ($obj = $result -> fetch_assoc()){
         $session[] = $obj;
@@ -31,6 +28,8 @@ if($result = $mysqli -> query($querySel)){
     $result -> close();
 }
 $session = $session;
+$col = $sessionCot[0]['COUNT(*)'];
+
 
 $mysqli -> close();
  ?>

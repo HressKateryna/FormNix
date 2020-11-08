@@ -3,7 +3,7 @@
 require_once(dirname(__FILE__) . '/actions/cook.php');
 require_once(dirname(__FILE__) . '/templates/tmpForm.php');
 require_once(dirname(__FILE__) . '/actions/valid.php');
-require_once(dirname(__FILE__) . '/actions/bd.php');
+
 
 /*require_once('./phpmailer/PHPMailer.php');
 require_once('./phpmailer/SMTP.php');
