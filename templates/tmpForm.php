@@ -44,10 +44,6 @@
 			  border: 1px solid #999;
 			}
 
-			input:focus, 
-			textarea:focus {
-			  border-color: #000;
-			}
 
 			textarea {
 			  vertical-align: top;
@@ -77,9 +73,22 @@
 				background-color: #DEB887;
 				width: 150px;
 				height: 25px;
+				
 			}
-			#lab{
-				margin-left: 120px;
+			#leb{
+				margin-left: 125px;
+				border-radius: 7px;
+				font-family: Comic Sans MS, sans-serif;
+				margin-top: 20px;
+				background-color: #DEB887;
+				width: 150px;
+				height: 25px;
+				border: 1.5px solid #8B4513;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				margin-top: -15px;
 			}
 	</style>
 </head>
@@ -107,12 +116,9 @@
 		  <center>
 		  	<input id="sub" type="submit" name="submit" value="Зарегестрировать" />
 		  </center>
-		  <label id="leb">
-		  	<a href="">Войти</a>
-		  </lable>
-		  <label id="leb">
-		  	<a href="review.php">Каталог товаров</a>
-		  </label>
+		  <center id="leb">
+		  	<a href="review.php">Список отзывов</a>
+		  </center>
 
 		  
 	</form>
